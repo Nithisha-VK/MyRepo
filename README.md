@@ -1,5 +1,20 @@
 # 👋 Hello developer!
+
 This project contains a basic HTML structure to get you started. 
+
+
+## 🏗 What's next?
+
+Build your project however you like using HTML, CSS and JavaScript. 
+
+Use these four files as your starting point:
+
+
+- **index.html:** This is the default page for your space, where you write HTML, the standard markup language for creating web pages.
+- **styles.css:** Use the CSS file to style your content and change the look of your space with beautiful colors, fonts and much more. 
+- **scripts.js:** Use this file to make your website dynamic and interactive with JavaScript. 
+
+> **Note:** The **styles.css** and **scripts.js** files link into the **index.html** file so that they are all connected.
 
 
 <h1>Hello, World!</h1>
@@ -252,27 +267,470 @@ The HTML standard does not require lowercase tags
 * The `lang` attribute of the `<html>` tag declares the language of the Web page
 * The `title` attribute defines some extra information about an element
 
-## 🏗 What's next?
-
-Build your project however you like using HTML, CSS and JavaScript. 
-
-Use these four files as your starting point:
+<h2>Exercise</h2>
 
 
-- **index.html:** This is the default page for your space, where you write HTML, the standard markup language for creating web pages.
-- **styles.css:** Use the CSS file to style your content and change the look of your space with beautiful colors, fonts and much more. 
-- **scripts.js:** Use this file to make your website dynamic and interactive with JavaScript. 
 
-> **Note:** The **styles.css** and **scripts.js** files link into the **index.html** file so that they are all connected.
 
+1. Add an HTML `<title>` tag with the text "Hello, World!"
+2. Add a paragraph (`<p>` tag) to the body with the text "Hello, World!"
+3. Add an HTML `<h1>` tag with the text "I'm the most important!"
+4. Add an HTML `<h2>` tag with the text "I'm less important!"
+5. Add an HTML `<h6>` tag with the text "I'm the least important!"
+<h1>
+    Links</h1>
+
+
+
+---
+
+
+A link ("anchor") is a small span of text that will direct you to a different section in the page, or to a different page. To create a link, you will need to specify where you would like the user to be directed to when the link is clicked by specifying the `href` attribute.
+
+For example:
+
+
+```
+    <a href="https://www.google.com">A link to Google</a>
+```
+
+
+To create a link to a different section in the same page, you will need to use a hash sign along with the element ID to where you would like the browser to jump to. For example:
+
+
+```
+    <a href="#faq">Click here to read the Frequently Asked Questions</a>
+```
+
+
+The element ID is denoted using the `id` attribute:
+
+
+```
+    <h3 id="faq">Frequently asked questions</h3>
+    <p>The first rule about fight club is that you do not talk about fight club.</p>
+```
+
+
+Let's try it out:
+
+
+```
+    <!DOCTYPE html>
+    <html>
+        <head>
+        </head>
+        <body>
+            <h1>My First Page</h1>
+            <p>This is my first page.</p>
+            <a href="#faq">Click here to read the Frequently Asked Questions</a>
+            <hr/>
+            <h3 id="faq">Frequently asked questions</h3>
+            <p>The first rule about fight club is that you do not talk about fight club.</p>
+            <p>However, if you do have questions, please e-mail me at foo@bar.com</p>
+
+        </body>
+    </html>
+```
+
+
+<h2>
+    Exercise</h2>
+
+
+
+
+1. Mark the word `Go to google.` to a `link` to `https://www.google.com` .
+2. Mark the word `Go to blue!` to an `anchor` and link it to element `<div id="blue">` , and so does `Back to green!` .
+<h1>
+    Lists</h1>
+
+
+
+---
+
+
+HTML provides a way to create both an ordered list (with elements counting up, 1, 2, 3...) and an unordered list with bullets instead of numbers. Lists are a good way to formalize a list of items and let the HTML styling do the work for you.
+
+<h3>
+    Ordered lists</h3>
+
+
+Here is an example of how to create an ordered list:
+
+
+```
+    <p>Here is a list of ordered items:</p>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+```
+
+
+Ordered lists have a "type" attribute which defines the numbering convention to use.
+
+To count using numbers, use type="1":
+
+
+```
+    <p>Here is a list of ordered items:</p>
+    <ol type="1">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+```
+
+
+To count using uppercase letters, use type="A":
+
+
+```
+    <p>Here is a list of ordered items:</p>
+    <ol type="A">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+```
+
+
+To count using lowercase letters, use type="a":
+
+
+```
+    <p>Here is a list of ordered items:</p>
+    <ol type="a">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+```
+
+
+To count using uppercase roman numerals, use type="I":
+
+
+```
+    <p>Here is a list of ordered items:</p>
+    <ol type="I">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+```
+
+
+To count using lowercase roman numerals, use type="i":
+
+
+```
+    <p>Here is a list of ordered items:</p>
+    <ol type="i">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+```
+
+
+<h3>
+    Unordered lists</h3>
+
+
+Here is an example of how to create an unordered list:
+
+Here is a list of unordered items:
+
+
+
+* First item
+* Second item
+* Third item
+
+To change the list style attributes, we can use the CSS attribute called `list-style-type`. The available types are:
+
+
+
+* disc
+* circle
+* square
+* none
+
+Here is an example of the disc list style type:
+
+
+```
+    <p>Here is a list of unordered items:</p>    
+    <ul style="list-style-type: disc">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+```
+
+
+Here is an example of the circle list style type:
+
+
+```
+    <p>Here is a list of unordered items:</p>    
+    <ul style="list-style-type: circle">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+```
+
+
+Here is an example of the square list style type:
+
+
+```
+    <p>Here is a list of unordered items:</p>    
+    <ul style="list-style-type: square">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+```
+
+
+Here is an example of the none list style type:
+
+
+```
+    <p>Here is a list of unordered items:</p>    
+    <ul style="list-style-type: none">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+```
+
+
+<h2>
+    Exercise</h2>
+
+
+Use `<ul>` and `<ol>` listing the list(bottom) below the text `My favorite foods/drinks list`.
+
+(Hint: You can insert a list to a list like `<ol>` into `<li>`)
+
+
+```
+    • Foods
+        1. Egg
+        2. Sushi
+    • Drinks
+        1. Apple juice
+        2. Coffee
+```
+
+
+<h1>
+    Images</h1>
+
+
+
+---
+
+Images in HTML are inline elements that can be placed within a paragraph. To add an image, use the `<img>` tag along with the `src` attribute to specify the location of the image.
+
+
+```
+    <img src="/static/img/code.jpg">
+```
+
+
+You may use JavaScript to trigger an event when an image finished loading.
+
+
+```
+    <img src="/static/img/code.jpg" onload="alert('image loaded')">
+```
+
+
+Resizing the image can be done using the width and height attributes of an image, or alternatively by using CSS:
+
+
+```
+    <img src="/static/img/code.jpg" width="100">
+
+    <img src="/static/img/code.jpg" style="width: 100px">
+```
+
+
+Having an "alt" attribute set for the image is useful for when an image could not load or when you want to add a tooltip description that will be displayed when hovering on top of an image.
+
+
+```
+    <img src="/static/img/code.jpg" style="width: 100px" alt="A picture of some code">
+```
+
+
+<h3>
+    Image Types</h3>
+
+
+There are three main types of image formats which you should be using.
+
+
+
+* Lossless formats - useful for when you need pixel-perfect graphics, for example for logos. The most common format is PNG. PNG also supports alpha transparency, meaning that you can use any background you want and overlay the image on top of that background.
+* Lossy formats - useful for displaying rich images. Using a lossless format such as PNG would be an order of magnitude larger if used in such images. The most common format used in this category is JPG.
+* Animated formats - useful for showing short animated images. The most common format is GIF, although it is a very old yet widely supported format, with many inherent drawbacks, such as a 256 color limit on each frame, and bad compression.
+<h3>
+    Using the CSS float attribute with images</h3>
+
+
+
+Images can be set to float nearby text so they would blend with the text better. Notice the use of the `clear` CSS attribute - which directs the browser to break the floating effect after the first paragraph.
+
+
+```
+    <img src="/static/img/lab.png" style="float: left;">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <p style="clear: both">Second paragraph</p>
+```
+
+
+<h2>
+    Exercise</h2>
+
+
+
+
+1. Add an image within the body, tag with the image "photo.jpg".
+2. Adjust size of img to 100px by 100px
+3. Add onload command, onload="alert('')" with the text "task complete"
+
+<h1>HTML Styles</h1>
+
+
+The HTML `style` attribute is used to add styles to an element, such as color, font, size, and more.
+
+Setting the style of an HTML element, can be done with the `style` attribute.
+
+The HTML `style` attribute has the following syntax:
+
+
+```
+<tagname style="property:value;">
+```
+
+
+The _property_ is a CSS property. The _value_ is a CSS value.
+
+<h2>Background Color</h2>
+
+
+The CSS `background-color` property defines the background color for an HTML element.
+
+
+```
+<body style="background-color:powderblue;">
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+```
+
+
+<h2>Text Color</h2>
+
+
+The CSS `color` property defines the text color for an HTML element:
+
+
+```
+<h1 style="color:blue;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+```
+
+
+<h2>Fonts</h2>
+
+
+The CSS `font-family` property defines the font to be used for an HTML element:
+
+
+```
+<h1 style="font-family:verdana;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p>
+```
+
+
+<h2>Text Size</h2>
+
+
+The CSS `font-size` property defines the text size for an HTML element:
+
+
+```
+<h1 style="font-size:300%;">This is a heading</h1>
+<p style="font-size:160%;">This is a paragraph.</p>
+```
+
+
+<h2>Text Alignment</h2>
+
+
+The CSS `text-align` property defines the horizontal text alignment for an HTML element:
+
+
+```
+<h1 style="text-align:center;">Centered Heading</h1>
+<p style="text-align:center;">Centered paragraph.</p>
+```
+
+
+<h1>Classes</h1>
+
+
+
+---
+
+CSS classes are commonly used to define a set of CSS styles and then apply them on an HTML element using selectors. To define a class within a CSS stylesheet, use the dot selector, as follows:
+
+
+```
+<style>
+.nice {
+    font-family: sans-serif;
+}
+</style>
+```
+
+
+Each HTML element can have a set of classes, ordered in a specific order. Each class will potentially add a set of CSS definitions according to the styles that were defined in the page. In this piece of code we have defined a CSS rule that will be applied to every element that contains the "nice" class. This means that once this piece of code has been defined inside the HTML page, the following HTML paragraph will have the style applied to it:
+
+
+```
+<style>
+.nice {
+    font-family: sans-serif;
+}
+</style>
+<p class="nice">This is a short sentence.</p>
+
+	
 
 ## 🎨 Where to find everything
 
 - **HTML:** Learn HTML .  
-	[Go to tutorial about fonts](https://www.w3schools.com/html/default.asp)
+	[Go to tutorial about HTML](https://www.w3schools.com/html/default.asp)
 
 - **Front-end Development:** Learn Front-end Development .  
-	[Go to tutorial about fonts](https://www.w3schools.com/where_to_start.asp)
+	[Go to tutorial about Front-end Development](https://www.w3schools.com/where_to_start.asp)
 
 
 - **Fonts:** Add your favorite from **Google fonts**.  
