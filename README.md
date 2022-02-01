@@ -3,7 +3,7 @@ This project contains a basic HTML structure to get you started.
 
 
 <h1>Hello, World!</h1>
----
+
 
 Welcome to _Learn HTML_, the easiest way to learn HTML & CSS interactively.
 
