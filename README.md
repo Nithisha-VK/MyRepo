@@ -722,8 +722,12 @@ Each HTML element can have a set of classes, ordered in a specific order. Each c
 </style>
 <p class="nice">This is a short sentence.</p>
 
-	
+```	
 
+	
+	
+	
+	
 ## 🎨 Where to find everything
 
 - **HTML:** Learn HTML .  
